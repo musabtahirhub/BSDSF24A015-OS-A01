@@ -1,0 +1,18 @@
+.TH MYFILEFUNCTIONS 3 "September 2026" "Version 1.0" "MyUtils Library Manual"
+.SH NAME
+wordCount, mygrep \- file text analysis and pattern matching utilities
+.SH SYNOPSIS
+.B #include <myfilefunctions.h>
+.sp
+.BI "int wordCount(FILE *" file ", int *" lines ", int *" words ", int *" chars ");"
+.br
+.BI "int mygrep(FILE *" fp ", const char *" search_str ", char ***" matches ");"
+.SH DESCRIPTION
+.TP
+.B wordCount()
+Scans the open file stream \fIfile\fR and counts total lines, words, and characters. Populates each integer pointer and returns 0 on success, or -1 on error.
+.TP
+.B mygrep()
+Searches the open file stream \fIfp\fR for lines matching \fIsearch_str\fR. Dynamically allocates an array of string pointers stored in \fImatches\fR. Returns the count of matches found, or -1 on error.
+.SH AUTHOR
+Musab Tahir (BSDSF24A015)

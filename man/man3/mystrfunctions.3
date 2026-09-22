@@ -1,0 +1,31 @@
+.TH MYSTRFUNCTIONS 3 "September 2026" "Version 1.0" "MyUtils Library Manual"
+.SH NAME
+mystrlen, mystrcpy, mystrncpy, mystrcat \- custom string manipulation utility functions
+.SH SYNOPSIS
+.B #include <mystrfunctions.h>
+.sp
+.BI "int mystrlen(const char *" s ");"
+.br
+.BI "int mystrcpy(char *" dest ", const char *" src ");"
+.br
+.BI "int mystrncpy(char *" dest ", const char *" src ", int " n ");"
+.br
+.BI "int mystrcat(char *" dest ", const char *" src ");"
+.SH DESCRIPTION
+The
+.B mystrfunctions
+family of functions provides string manipulation operations:
+.TP
+.B mystrlen()
+Calculates and returns the length of the string \fIs\fR up to the terminating null byte.
+.TP
+.B mystrcpy()
+Copies the string pointed to by \fIsrc\fR into the buffer pointed to by \fIdest\fR.
+.TP
+.B mystrncpy()
+Copies at most \fIn\fR bytes of the string \fIsrc\fR into \fIdest\fR, padding with null bytes if necessary.
+.TP
+.B mystrcat()
+Appends the string \fIsrc\fR onto the end of string \fIdest\fR, overwriting the initial null byte.
+.SH AUTHOR
+Musab Tahir (BSDSF24A015)
